@@ -29,7 +29,7 @@ class FormCustomer extends Component{
    			 		}.bind(this),
    			  		error: function(resposta){
    			    		if(resposta.status === 400) {
-   			      		new FormValidating().publicaErros(resposta.responseJSON);
+   			      		new FormValidating().publishError(resposta.responseJSON);
    			    	}},
    			  		beforeSend: function(){
    			    		PubSub.publish("limpa-erros",{});

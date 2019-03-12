@@ -20,7 +20,7 @@ mkdir Project
 
 //Install create-react-app components on App path
 
-create-react-app Projeto
+create-react-app Project
 
 cd .\Project
 

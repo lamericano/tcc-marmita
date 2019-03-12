@@ -32,4 +32,4 @@ npm install jquery --save
 
 npm install pubsub-js --save
 
-Copy files available in GitHub to ./wsrc path
+Copy files available in GitHub to ./src path

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './css/pure-min.css';
 import './css/side-menu.css';
-import CustomerBox from './Customer.js';
-
+import UsuarioBox from './Usuario';
+import ProdutoBox from './Produto';
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -16,27 +17,27 @@ class App extends Component {
                             <a className="pure-menu-heading" href="testReact">Company</a>
                             <ul className="pure-menu-list">
                               <li className="pure-menu-item">
-                                <a href="testReact" className="pure-menu-link">Home</a>
+                                <a href="/" className="pure-menu-link">Home</a>
                               </li>
                               <li className="pure-menu-item">
-                                <a href="testReact" className="pure-menu-link">Customer</a>
+                                <a href="/usuario" className="pure-menu-link">Usuario</a>
                               </li>
                               <li className="pure-menu-item">
-                                <a href="testReact" className="pure-menu-link">Food</a>
+                                <a href="/produto" className="pure-menu-link">Food</a>
                               </li>
                             </ul>
                           </div>
                   </div>
                   <div id="main">
-                    <div className="header">
-                      <h1>Cadastro</h1>
-                    </div>
-                    <br/>
                     <div className="content" id="content">
-                      <CustomerBox/>
+                      <Route exact path='/' render={() => (<UsuarioBox/>)}/>
+                      <Route exact path='/produto' render={() => (<ProdutoBox/>)}/>
+                      
                     </div>
                   </div>
-            </div>    
+            </div>   
+
+
        );
      }
    }

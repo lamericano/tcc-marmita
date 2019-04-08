@@ -32,4 +32,8 @@ npm install jquery --save
 
 npm install pubsub-js --save
 
+//Install dependency React Router DOM
+
+npm install react-router-dom --save
+
 Copy files available in GitHub to ./src path
